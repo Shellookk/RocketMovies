@@ -12,8 +12,9 @@ const notesMoviesController = new NotesMoviesController();
 
 
 //Criação de usuário
+movieNotesRoutes.get("/", notesMoviesController.index);
 movieNotesRoutes.post("/:user_id", notesMoviesController.create); // criar
 movieNotesRoutes.get("/:id", notesMoviesController.show); // visualizar
-movieNotesRoutes.delete("/:id", notesMoviesController.delete);
+movieNotesRoutes.delete("/:id", notesMoviesController.delete); // deletar
 // Exportando 
 module.exports = movieNotesRoutes;
