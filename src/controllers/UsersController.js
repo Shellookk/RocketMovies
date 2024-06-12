@@ -77,9 +77,5 @@ class UsersController{
 
         return response.status(200).json();
     };
-
-    async delete(request, response){
-
-    };
 };
 module.exports = UsersController;
