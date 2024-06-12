@@ -1,5 +1,5 @@
 // Exportações
-const { has, compare, hash } = require("bcryptjs");
+const { compare, hash } = require("bcryptjs");
 const AppError = require("../utils/AppError");
 const sqliteConnection = require("../database/sqlite");
 
