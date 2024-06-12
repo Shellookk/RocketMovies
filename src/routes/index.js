@@ -7,6 +7,5 @@ const movie_notesRoutes = require("./movie_notes.routes");
 const routes = Router();
 
 routes.use('/users', usersRoutes);
-routes.use('/movie-notes', movie_notesRoutes);
-
+routes.use('/movie_notes', movie_notesRoutes);
 module.exports = routes;

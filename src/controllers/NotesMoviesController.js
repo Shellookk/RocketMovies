@@ -26,13 +26,29 @@ class NotesMoviesController{
         response.json();
     };
 
+    async show(request, response){
+        const { id } = request.params;
+        const movie_note = await knex("movie_notes").where({ id }).first();
+        const movie_tags = await knex("movie_tags").where({ note_id: id }).orderBy("name");
+
+        return response.json({
+            ...movie_note,
+            movie_tags
+        });        
+    };
+
     async update(request, response){
         
     }
 
     async delete(request, response){
+        const { id } = request.params;
         
-    }
+        await knex("movie_notes").where({ id }).delete();
+
+        return response.json()
+    };
+
 
 
 };
